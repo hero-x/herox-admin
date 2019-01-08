@@ -1,5 +1,5 @@
 const deploy = {
-  env:'dev',
+  env:'pro',
   db:{
     name:'herox',
     account:'herox',
