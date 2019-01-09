@@ -6,10 +6,8 @@ import route from './routes'
 import bodyParser from 'koa-bodyparser'
 async function start () {
   const app = new Koa()
-  // const host = process.env.NODE_ENV=='production'? 'http://47.106.163.14': '127.0.0.1'
-  // const port = process.env.NODE_ENV=='production'? 3002 : 3000
-  const host = config.env=='dev'?'127.0.0.1':'0.0.0.0'
-  const port = config.env=='dev'?4002:4001
+  const host = process.env.NODE_ENV=='production'? '0.0.0.0': '127.0.0.1'
+  const port = process.env.NODE_ENV=='production'? 3031 : 3030
   app.on('error', function(err,ctx){
     console.log('-------统一错误打印-------');
     console.log(err);
